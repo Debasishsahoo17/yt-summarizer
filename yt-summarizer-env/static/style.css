@@ -1,0 +1,342 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #ec093e, #bbb3b3);
+    margin: 0;
+    padding: 0;
+    color: rgb(0, 0, 0);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+    background: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+/* Logo Alignment */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+/* Navigation Links */
+nav {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 15px;
+    align-items: center;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+nav::-webkit-scrollbar {
+    display: none;
+}
+
+nav a {
+    color: #f4f0f0;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+    padding: 8px;
+}
+
+nav a:hover {
+    color: #ffd700;
+}
+
+/* Main Content */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    text-align: center;
+    padding: 20px;
+}
+
+main h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+main h1 span {
+    text-decoration: underline;
+    color: #ffd700;
+}
+
+main p {
+    color: #000000;
+    margin-top: 8px;
+    font-size: 1.2rem;
+    max-width: 600px;
+}
+
+/* Input Group Styling */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 32px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.input-group input, 
+.input-group button, 
+.input-group .dropdown {
+    padding: 12px;
+    border: 1px solid #f8f0f0;
+    border-radius: 8px;
+    margin: 8px 0;
+    width: 100%;
+    max-width: 400px;
+    font-size: 1rem;
+}
+
+.input-group input {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    outline: none;
+}
+
+.input-group input::placeholder {
+    color: #ddd;
+}
+
+/* Dropdown Styles */
+.input-group .dropdown {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    background: #007bff;
+    color: white;
+    border: none;
+    font-weight: bold;
+    text-align: center;
+}
+
+.input-group .dropdown:hover {
+    background: #0056b3;
+}
+
+.input-group .dropdown i {
+    margin-left: 8px;
+}
+
+.input-group .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    border-radius: 8px;
+    top: 100%;
+    left: 0;
+    max-height: 500px;
+}
+
+.input-group .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.input-group .dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.input-group .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Summarize Button */
+#summarizeButton {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+}
+
+#summarizeButton:hover {
+    background-color: #0056b3;
+}
+
+/* Download Button */
+.download-button {
+    margin-top: 32px;
+    padding: 16px 32px;
+    background-color: #6b46c1;
+    color: white;
+    border: none;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.download-button i {
+    margin-right: 8px;
+}
+
+.download-button:hover {
+    background-color: #5933a3;
+}
+
+/* Links */
+.links {
+    display: flex;
+    margin-top: 16px;
+    color: rgb(32, 45, 168);
+}
+
+.links a {
+    display: flex;
+    align-items: center;
+    margin: 0 8px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.links a i {
+    margin-right: 4px;
+}
+
+.links a:hover {
+    color: #ffd700;
+}
+
+/* Summary Box Styling */
+#summary-box {
+    text-align: left;
+    max-width: 600px;
+    margin: 20px auto; /* Center it, consistent with input-group */
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+#summary-text {
+    margin: 10px 0;
+    padding-left: 20px; /* Indent for bullets */
+    color: #333;
+}
+
+#summary-text li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+    list-style-type: disc; /* Ensure bullet points are visible */
+}
+
+/* Responsive Styles */
+@media (min-width: 640px) {
+    .input-group {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .input-group input {
+        width: 300px;
+    }
+
+    .input-group .dropdown, 
+    .input-group button {
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+}
+
+/* Two-Column Layout */
+.two-column-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px auto;
+    max-width: 900px;
+}
+
+.column {
+    width: 48%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.column h2 {
+    text-align: center;
+    color: #333;
+}
+
+/* Responsive Navbar and Layout Adjustments */
+@media (max-width: 768px) {
+    header {
+        padding: 12px 16px;
+    }
+
+    nav {
+        gap: 10px;
+        flex-grow: 1;
+    }
+
+    .logo img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .two-column-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .column {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 16px;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: flex-start;
+        gap: 8px;
+        margin-top: 10px;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+        padding: 6px;
+    }
+}
